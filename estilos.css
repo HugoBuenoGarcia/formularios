@@ -1,0 +1,174 @@
+/* estilos.css */
+
+/* Variables de Color para Coherencia */
+:root {
+    --primary-color: #007bff; /* Azul vibrante */
+    --secondary-color: #6c757d; /* Gris para textos secundarios */
+    --background-color: #f8f9fa; /* Fondo claro */
+    --form-background: #ffffff; /* Fondo del formulario blanco */
+    --border-color: #ced4da;
+    --error-color: #dc3545;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Header y Logo --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: var(--form-background);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo-placeholder {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.auth-icon {
+    /* Icono en la esquina superior derecha */
+    font-size: 1.5em;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.auth-icon:hover {
+    background-color: var(--background-color);
+}
+
+/* --- Contenedor Principal del Formulario --- */
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: var(--form-background);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* --- Grupos de Input y Estética de Campo --- */
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 10px 10px 40px; /* Espacio para el icono */
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Estilo del Foco */
+.input-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Placeholder y Iconos */
+.input-group .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary-color); /* Icono gris */
+    pointer-events: none; /* Asegura que el icono no interfiera con el input */
+}
+
+/* Estilos para Contraseña (toggle button) */
+.password-group input {
+    padding-right: 50px; /* Espacio para el botón de toggle */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--secondary-color);
+    font-size: 1em;
+}
+
+.toggle-password:hover {
+    color: var(--primary-color);
+}
+
+/* --- Botón de Enviar --- */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3; /* Tono más oscuro al pasar el ratón */
+}
+
+/* --- Aviso Legal (LOPD) y Enlaces --- */
+.lopd-group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.lopd-group label {
+    margin-left: 10px;
+    color: var(--secondary-color);
+}
+
+.form-container p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-container a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
+
+/* Mensajes de Error */
+.error-message {
+    display: block;
+    color: var(--error-color);
+    font-size: 0.85em;
+    margin-top: 5px;
+}

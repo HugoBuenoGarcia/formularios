@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso - Nuestro Sitio</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-placeholder">Tu Logo Aquí</div>
+        <a href="registro.html" class="auth-icon" title="Regístrate">
+            <i class="fas fa-user-plus"></i> </a>
+    </header>
+
+    <main class="form-container">
+        <h2>Acceso de Usuarios</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <i class="fas fa-envelope icon"></i>
+                <input type="email" id="loginEmail" placeholder="Correo electrónico" required>
+                <span class="error-message" id="emailError"></span>
+            </div>
+
+            <div class="input-group password-group">
+                <i class="fas fa-lock icon"></i>
+                <input type="password" id="loginPassword" placeholder="Contraseña" required>
+                <button type="button" class="toggle-password" onclick="togglePasswordVisibility('loginPassword')">
+                    <i id="toggleLoginIcon" class="fas fa-eye-slash"></i>
+                </button>
+            </div>
+            
+            <button type="submit" class="submit-btn">Acceder</button>
+        </form>
+        <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+    </main>
+    <script src= "https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="validacion.js"></script>
+    <script src="firebase-auth.js"></script>
+</body>
+</html>

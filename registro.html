@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Nuestro Sitio</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-placeholder">Tu Logo Aquí</div>
+        <a href="login.html" class="auth-icon" title="Acceder">
+            <i class="fas fa-sign-in-alt"></i> </a>
+    </header>
+    <main class="form-container">
+        <h2>Registro de Nuevos Usuarios</h2>
+        <form id="registerForm">
+            <div class="input-group">
+                <i class="fas fa-envelope icon"></i>
+                <input type="email" id="regEmail" placeholder="Correo electrónico (usuario)" required>
+                <span class="error-message" id="regEmailError"></span>
+            </div>
+
+            <div class="input-group password-group">
+                <i class="fas fa-lock icon"></i>
+                <input type="password" id="regPassword1" placeholder="Contraseña" required>
+                <button type="button" class="toggle-password" onclick="togglePasswordVisibility('regPassword1')">
+                    <i id="toggleRegIcon1" class="fas fa-eye-slash"></i>
+                </button>
+            </div>
+            
+            <div class="input-group password-group">
+                <i class="fas fa-lock icon"></i>
+                <input type="password" id="regPassword2" placeholder="Confirmar Contraseña" required>
+                <button type="button" class="toggle-password" onclick="togglePasswordVisibility('regPassword2')">
+                    <i id="toggleRegIcon2" class="fas fa-eye-slash"></i>
+                </button>
+                <span class="error-message" id="passwordMatchError"></span>
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-user icon"></i>
+                <input type="text" id="regNombre" placeholder="Nombre completo" required>
+            </div>
+            
+            <div class="input-group">
+                <i class="fas fa-map-marker-alt icon"></i>
+                <input type="text" id="regDireccion" placeholder="Dirección completa">
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-calendar-alt icon"></i>
+                <input type="number" id="regNacimiento" placeholder="Año de Nacimiento" min="1900" max="2025">
+            </div>
+
+            <div class="lopd-group">
+                <input type="checkbox" id="lopdCheck" required>
+                <label for="lopdCheck">He leído y acepto la Política de Privacidad sobre el tratamiento de mis datos personales.</label>
+            </div>
+            
+            <button type="submit" class="submit-btn">Registrarse</button>
+        </form>
+        <p>¿Ya tienes cuenta? <a href="login.html">Accede aquí</a></p>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="validacion.js"></script>
+    <script src="firebase-auth.js"></script>
+</body>
+</html>
