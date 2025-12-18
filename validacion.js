@@ -4,7 +4,6 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 // Función para alternar la visibilidad de la contraseña
 function togglePasswordVisibility(fieldId) {
     const passwordField = document.getElementById(fieldId);
-    // Nota: Se ha simplificado la forma de obtener el ID del icono para el caso 'regPassword1'
     const toggleIcon = document.getElementById('toggle' + fieldId.replace('login', 'Login').replace('reg', 'Reg') + 'Icon');
 
     if (passwordField.type === "password") {
@@ -45,20 +44,20 @@ function validatePasswordMatch() {
     const psw1 = document.getElementById('regPassword1').value;
     const psw2 = document.getElementById('regPassword2').value;
     const errorMsg = document.getElementById('passwordMatchError');
-    const psw2Input = document.getElementById('regPassword2'); // Obtener el elemento
+    const psw2Input = document.getElementById('regPassword2');
 
     if (psw1 !== psw2) {
         errorMsg.textContent = "Las contraseñas no coinciden.";
-        psw2Input.classList.add('invalid'); // Aplicar clase al input
+        psw2Input.classList.add('invalid');
         return false;
     } else {
         errorMsg.textContent = "";
-        psw2Input.classList.remove('invalid'); // Remover clase
+        psw2Input.classList.remove('invalid');
         return true;
     }
 }
 
-// Event Listeners para validación en tiempo real (NO para el envío/submit)
+// Event Listeners para validación en tiempo real
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Lógica para LOGIN
     const loginEmailInput = document.getElementById('loginEmail');
