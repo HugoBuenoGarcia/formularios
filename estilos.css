@@ -1,11 +1,8 @@
-/* estilos.css */
-
-/* Variables de Color para Coherencia */
 :root {
-    --primary-color: #007bff; /* Azul vibrante */
-    --secondary-color: #6c757d; /* Gris para textos secundarios */
-    --background-color: #f8f9fa; /* Fondo claro */
-    --form-background: #ffffff; /* Fondo del formulario blanco */
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --form-background: #ffffff;
     --border-color: #ced4da;
     --error-color: #dc3545;
 }
@@ -20,7 +17,6 @@ body {
     min-height: 100vh;
 }
 
-/* --- Header y Logo --- */
 header {
     display: flex;
     justify-content: space-between;
@@ -37,7 +33,6 @@ header {
 }
 
 .auth-icon {
-    /* Icono en la esquina superior derecha */
     font-size: 1.5em;
     color: var(--primary-color);
     text-decoration: none;
@@ -57,7 +52,7 @@ header {
     padding: 30px;
     background-color: var(--form-background);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px; /* Bordes redondeados */
+    border-radius: 10px;
 }
 
 .form-container h2 {
@@ -66,7 +61,6 @@ header {
     margin-bottom: 30px;
 }
 
-/* --- Grupos de Input y Estética de Campo --- */
 .input-group {
     margin-bottom: 20px;
     position: relative;
@@ -74,7 +68,7 @@ header {
 
 .input-group input {
     width: 100%;
-    padding: 10px 10px 10px 40px; /* Espacio para el icono */
+    padding: 10px 10px 10px 40px;
     border: 1px solid var(--border-color);
     border-radius: 5px;
     box-sizing: border-box;
@@ -89,19 +83,18 @@ header {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-/* Placeholder y Iconos */
 .input-group .icon {
     position: absolute;
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--secondary-color); /* Icono gris */
+    color: var(--secondary-color);
     pointer-events: none; /* Asegura que el icono no interfiera con el input */
 }
 
 /* Estilos para Contraseña (toggle button) */
 .password-group input {
-    padding-right: 50px; /* Espacio para el botón de toggle */
+    padding-right: 50px;
 }
 
 .toggle-password {
@@ -120,7 +113,6 @@ header {
     color: var(--primary-color);
 }
 
-/* --- Botón de Enviar --- */
 .submit-btn {
     width: 100%;
     padding: 12px;
@@ -135,7 +127,7 @@ header {
 }
 
 .submit-btn:hover {
-    background-color: #0056b3; /* Tono más oscuro al pasar el ratón */
+    background-color: #0056b3;
 }
 
 /* --- Aviso Legal (LOPD) y Enlaces --- */
